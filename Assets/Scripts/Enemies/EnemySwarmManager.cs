@@ -8,13 +8,13 @@ namespace Name
 	{
 		public Enemy[] enemies;
 
-		[Header ("SPEED")]
+		[Header ("MOVEMENT")]
 		[Range (0, 100)] public float speed;
 		[Range (-100, 0)] public float unitsDown;
 
-		[Header ("LIMITS")]
-		public float leftX;
-		public float rightX;
+		[Header ("POSITION BOUNDARIES")]
+		public float minPosX;
+		public float maxPosX;
 
 		float curSpeed;
 
@@ -26,7 +26,7 @@ namespace Name
 
 		void Update ()
 		{
-			var hittedLimit = false;
+			var hittedBoundaries = false;
 			foreach (var unit in enemies)
 			{
 				if (unit == null || unit.isActiveAndEnabled == false || unit.gameObject.activeInHierarchy == false || unit.gameObject.activeSelf == false)
@@ -34,14 +34,13 @@ namespace Name
 					Debug.Log ("pup");
 					continue;
 				}
-				var posX = unit.transform.position.x;
-				if (posX < leftX && curSpeed < 0 || posX > rightX && curSpeed > 0)
-				{
-					hittedLimit = true;
-				}
+				
+				if ( hittedBoundaries == false )
+					hittedBoundaries = HasHittedBoundaries( unit.transform.position.x );
+				unit.Shoot();
 			}
 
-			if (hittedLimit)
+			if (hittedBoundaries)
 			{
 				MoveDown ();
 			}
@@ -51,7 +50,12 @@ namespace Name
 			}
 		}
 
-		public void MoveToSides ()
+		bool HasHittedBoundaries(float posX)
+		{
+			return posX < minPosX && curSpeed < 0 || posX > maxPosX && curSpeed > 0;
+		}
+
+		void MoveToSides ()
 		{
 			foreach (var unit in enemies)
 			{
@@ -59,7 +63,7 @@ namespace Name
 			}
 		}
 
-		public void MoveDown ()
+		void MoveDown ()
 		{
 			curSpeed = -curSpeed;
 			foreach (var unit in enemies)
