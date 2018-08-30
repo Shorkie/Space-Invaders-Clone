@@ -1,0 +1,4 @@
+Enemies:
+    - Movement on character and bullets should use Time.deltaTime
+        pos.x = speed * Time.deltaTime
+    - Bullet prefab has more that one BulletBehaviour script
