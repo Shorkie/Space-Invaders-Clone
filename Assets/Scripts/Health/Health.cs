@@ -8,6 +8,8 @@ namespace Name
 	public class Health : MonoBehaviour
 	{
 		[SerializeField] float _maxHealth = 10;
+		public float maxHealth { get { return _maxHealth; } protected set { _maxHealth = value; } }
+
 		
 		float _healthPoints;
 		public float healthPoints { get { return _healthPoints; } protected set { _healthPoints = value; } }
