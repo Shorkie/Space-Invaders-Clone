@@ -40,6 +40,7 @@ TextureImporter:
     21300070: mSpriteSheet_46
     21300072: s
     21300074: bullet0
+    21300076: barrierBit
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -137,66 +138,6 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 00cc3cb6d7b905e43a075660fa52cfb7
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mSpriteSheet_1
-      rect:
-        serializedVersion: 2
-        x: 373
-        y: 92
-        width: 44
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c378286cb9734e44499c633f7af5ac91
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: barrier3
-      rect:
-        serializedVersion: 2
-        x: 428
-        y: 93
-        width: 36
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3239409203170374ea4c8a84cc84e28c
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: barrier4
-      rect:
-        serializedVersion: 2
-        x: 480
-        y: 93
-        width: 44
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dfb1883aab81b2b41934866f7c9a187d
       vertices: []
       indices: 
       edges: []
@@ -622,26 +563,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: barrierDestroyed
-      rect:
-        serializedVersion: 2
-        x: 367
-        y: 44
-        width: 30
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 15c3ddb18ab42a34d9d19eeaff9167bb
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: bullet
       rect:
         serializedVersion: 2
@@ -870,13 +791,33 @@ TextureImporter:
         width: 2
         height: 4
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: a04e0288929d85e44a1c7d1a42d72b07
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: barrierBit
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 80
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 850f9555a1fffcc4cb3c939f7f5b9b1c
       vertices: []
       indices: 
       edges: []

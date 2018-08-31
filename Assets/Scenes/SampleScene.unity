@@ -359,6 +359,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletSpawnPosition: {fileID: 373850178}
   bullet: {fileID: 1136562684376040, guid: dd2f0e8c0758feb4492d0fd723fb69fa, type: 2}
+  playerSpeed: 1.5
 --- !u!65 &1293741990
 BoxCollider:
   m_ObjectHideFlags: 0
