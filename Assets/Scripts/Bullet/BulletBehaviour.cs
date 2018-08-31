@@ -20,6 +20,7 @@ public class BulletBehaviour : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other)
 	{
 		Debug.Log(other.name);
+			Debug.Log(other.name);
 	}
 	//Destroying bullet when it's not being rendered by the camera
 	void OnBecameInvisible()
