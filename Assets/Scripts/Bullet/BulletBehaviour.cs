@@ -16,6 +16,11 @@ public class BulletBehaviour : MonoBehaviour {
 		bulletPos.y += bulletSpeed * Time.deltaTime;
 		this.transform.position = bulletPos;
 	}
+
+	void OnTriggerEnter(Collider other)
+	{
+		Debug.Log(other.name);
+	}
 	//Destroying bullet when it's not being rendered by the camera
 	void OnBecameInvisible()
 	{

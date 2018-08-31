@@ -37,9 +37,10 @@ GameObject:
   - component: {fileID: 4209987922912478}
   - component: {fileID: 114777843265722512}
   - component: {fileID: 114664942974687992}
+  - component: {fileID: 65416985498797512}
   m_Layer: 0
   m_Name: Enemy0
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -71,6 +72,18 @@ Transform:
   m_Father: {fileID: 4209987922912478}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &65416985498797512
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1651126327751088}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &114664942974687992
 MonoBehaviour:
   m_ObjectHideFlags: 1
