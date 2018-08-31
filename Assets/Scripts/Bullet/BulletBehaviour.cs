@@ -13,7 +13,7 @@ public class BulletBehaviour : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		bulletPos = this.transform.position;
-		bulletPos.y += bulletSpeed;
+		bulletPos.y += bulletSpeed * Time.deltaTime;
 		this.transform.position = bulletPos;
 	}
 	//Destroying bullet when it's not being rendered by the camera

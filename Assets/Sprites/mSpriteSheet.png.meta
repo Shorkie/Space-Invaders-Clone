@@ -3,7 +3,7 @@ guid: e6df1af1047485b48a8f1b0485c5d449
 TextureImporter:
   fileIDToRecycleName:
     21300000: barrier1
-    21300002: mSpriteSheet_1
+    21300002: barrier6
     21300004: barrier3
     21300006: barrier4
     21300008: enemy1
@@ -41,6 +41,10 @@ TextureImporter:
     21300072: s
     21300074: bullet0
     21300076: barrierBit
+    21300078: barrier2
+    21300080: barrier5
+    21300082: barrier7
+    21300084: enemyBullet
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -583,26 +587,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: barrier5
-      rect:
-        serializedVersion: 2
-        x: 480
-        y: 38
-        width: 44
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8f11b1dc49651924080f521b28175aa8
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: deadEnemy
       rect:
         serializedVersion: 2
@@ -818,6 +802,146 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 850f9555a1fffcc4cb3c939f7f5b9b1c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: barrier2
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 90
+        width: 44
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b79c4e146dadd742a62c4ac09a0b830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: barrier3
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 90
+        width: 44
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4842c007cbd91c94d965f3547ed2812d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: barrier4
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 90
+        width: 44
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4da20cd2a890c5040b59087ef861a3b0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: barrier5
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 56
+        width: 44
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac8056237fe122c4eb5347f5bd7f6c0b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: barrier6
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 23
+        width: 44
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e787740a8571b374591adabb9e0fdb02
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: barrier7
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 7
+        width: 45
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31c6e3172d4fe2c42b54ad87bff5cda6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyBullet
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 109
+        width: 2
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4eca3c02e4eef7844bf6309d5f8755aa
       vertices: []
       indices: 
       edges: []
