@@ -11,8 +11,7 @@ namespace Name
 		public float maxHealth { get { return _maxHealth; } protected set { _maxHealth = value; } }
 
 		
-		float _healthPoints;
-		public float healthPoints { get { return _healthPoints; } protected set { _healthPoints = value; } }
+		public float healthPoints { get; protected set; }
 
 		// [System.Serializable]
 		// public class UnityEventFloat : UnityEvent<float> {}
