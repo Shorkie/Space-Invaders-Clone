@@ -7,9 +7,12 @@ namespace Name
 {
 	public class Health : MonoBehaviour
 	{
-		public float healthPoints;
+		float _healthPoints = 1;
+		public float healthPoints { get { return _healthPoints; } protected set { _healthPoints = value; } }
 
+		[System.Serializable]
 		public class UnityEventFloat : UnityEvent<float> {}
+
 		public UnityEventFloat onDamageTaken;
 		public UnityEvent onDeath;
 
@@ -21,6 +24,7 @@ namespace Name
 			}
 
 			healthPoints -= value;
+
 			if ( onDamageTaken != null )
 				onDamageTaken.Invoke(healthPoints);
 
