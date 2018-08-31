@@ -12,7 +12,7 @@ namespace Name
 		[Header ("MOVEMENT")]
 		public float speed = 10;
 		public float hDir = 1;
-		float vDir = 0;
+		public float vDir = 0;
 		bool moveDown;
 		Vector2 mDir;
 		[Space]
