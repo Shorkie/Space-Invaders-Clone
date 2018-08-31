@@ -7,14 +7,21 @@ namespace Name
 {
 	public class Health : MonoBehaviour
 	{
-		float _healthPoints = 1;
+		[SerializeField] float _maxHealth = 10;
+		
+		float _healthPoints;
 		public float healthPoints { get { return _healthPoints; } protected set { _healthPoints = value; } }
 
-		[System.Serializable]
-		public class UnityEventFloat : UnityEvent<float> {}
+		// [System.Serializable]
+		// public class UnityEventFloat : UnityEvent<float> {}
 
-		public UnityEventFloat onDamageTaken;
-		public UnityEvent onDeath;
+		// public UnityEventFloat onDamageTaken;
+		// public UnityEvent onDeath;
+
+		void Awake()
+		{
+			healthPoints = _maxHealth;
+		}
 
 		public void TakeDamage(float value)
 		{
@@ -25,8 +32,8 @@ namespace Name
 
 			healthPoints -= value;
 
-			if ( onDamageTaken != null )
-				onDamageTaken.Invoke(healthPoints);
+			// if ( onDamageTaken != null )
+			// 	onDamageTaken.Invoke(healthPoints);
 
 			if (healthPoints <= 0)
 			{
@@ -37,8 +44,10 @@ namespace Name
 		void Die()
 		{
 			// TODO: Spawn effects
-			if ( onDeath != null )
-				onDeath.Invoke();
+			
+			// if ( onDeath != null )
+			// 	onDeath.Invoke();
+			
 			Destroy(this.gameObject);
 		}
 	}
