@@ -8,9 +8,19 @@ namespace Name
 	{
 		public GameObject pfbBullet;
 		public float baseChanceToShoot = 1;
+		[Space]
+		public Vector3 dir;
+		public float speed;
 
 		bool shot;
 		float timer;
+		Rigidbody2D rb2D;
+
+		void Awake()
+		{
+			rb2D = GetComponent<Rigidbody2D>();
+			rb2D.interpolation = RigidbodyInterpolation2D.Interpolate;
+		}
 
 		public void Shoot(float chanceModifier=1)
 		{
@@ -36,6 +46,12 @@ namespace Name
 					timer = 0;
 				}
 			}
+		}
+
+		void FixedUpdate()
+		{
+			//transform.position += dir * ( speed * Time.deltaTime );
+			rb2D.MovePosition(transform.position + dir * ( speed * Time.deltaTime ));
 		}
 	}
 }

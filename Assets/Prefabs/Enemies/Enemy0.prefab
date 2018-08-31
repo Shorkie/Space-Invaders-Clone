@@ -38,6 +38,7 @@ GameObject:
   - component: {fileID: 114777843265722512}
   - component: {fileID: 114664942974687992}
   - component: {fileID: 61259798628831618}
+  - component: {fileID: 50635958866318260}
   m_Layer: 0
   m_Name: Enemy0
   m_TagString: enemy
@@ -72,6 +73,26 @@ Transform:
   m_Father: {fileID: 4209987922912478}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &50635958866318260
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1651126327751088}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!61 &61259798628831618
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -108,7 +129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a48b3ab9894de434e9e23b87ac7c427d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthPoints: 1
+  _maxHealth: 10
 --- !u!114 &114777843265722512
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -120,6 +141,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31cf1e5dcd1ea654689465c8a5ee6ef7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dir: {x: 0, y: 0, z: 0}
+  speed: 0
   pfbBullet: {fileID: 1136562684376040, guid: 6e859ce19061f324ca3bc17e26e52ff0, type: 2}
   baseChanceToShoot: 2
 --- !u!212 &212853146287751204

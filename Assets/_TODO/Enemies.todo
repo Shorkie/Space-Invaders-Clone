@@ -4,3 +4,4 @@ Enemies:
     ✔ Smoother vertical movement @done(18-08-31 00:36)
     ☐ Spawner
     ☐ Add delay between rows
+    ☐ Enemies should die if they collide with each other
