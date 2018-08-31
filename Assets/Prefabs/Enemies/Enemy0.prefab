@@ -95,7 +95,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pfbBullet: {fileID: 1136562684376040, guid: 6e859ce19061f324ca3bc17e26e52ff0, type: 2}
-  baseChanceToShoot: 10
+  baseChanceToShoot: 2
 --- !u!212 &212853146287751204
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -30,7 +30,7 @@ namespace Name
 			if ( shot )
 			{
 				timer += Time.deltaTime;
-				if ( timer > 1 )
+				if ( timer > Random.Range(.5f, 1.5f) )
 				{
 					shot = false;
 					timer = 0;
