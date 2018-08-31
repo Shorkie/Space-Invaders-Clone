@@ -13,7 +13,7 @@ namespace Name
 		public UnityEventFloat onDamageTaken;
 		public UnityEvent onDeath;
 
-		void TakeDamage(float value)
+		public void TakeDamage(float value)
 		{
 			if ( value < 0 )
 			{
