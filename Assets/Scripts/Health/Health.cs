@@ -21,7 +21,8 @@ namespace Name
 			}
 
 			healthPoints -= value;
-			onDamageTaken.Invoke(healthPoints);
+			if ( onDamageTaken != null )
+				onDamageTaken.Invoke(healthPoints);
 
 			if (healthPoints <= 0)
 			{
@@ -32,7 +33,8 @@ namespace Name
 		void Die()
 		{
 			// TODO: Spawn effects
-			onDeath.Invoke();
+			if ( onDeath != null )
+				onDeath.Invoke();
 			Destroy(this.gameObject);
 		}
 	}
