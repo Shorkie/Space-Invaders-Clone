@@ -7,6 +7,9 @@ namespace Name
 	{
 		public int bulletDamage;
 		public float bulletSpeed;
+		//Spawn check 
+		string spawner;
+		bool checkSpawner = true;
 		Vector3 bulletPos;
 		// Use this for initialization
 		void Start ()
@@ -26,18 +29,19 @@ namespace Name
 		{
 			var h = other.GetComponent<Health> ();
 			var s = Camera.main.GetComponent<Screenshake> ();
-			if (h != null)
+			if (checkSpawner){
+			spawner = other.tag;
+			checkSpawner = false;
+			}
+			if (h != null && other.tag != spawner)
 			{
 				//Shake
 				s.shouldShake = true;
 				h.TakeDamage (bulletDamage);
 				Debug.Log (this.name + " hitted with object " + other.name);
+				//Destroying bullet upon impact
+				Destroy(gameObject);
 
-			}
-			//Destroying bullet on impact with barrier
-			if (other.gameObject.tag == "barrier")
-			{
-				Destroy (gameObject);
 			}
 		}
 		//Destroying bullet when it's not being rendered by the camera

@@ -293,12 +293,21 @@ Prefab:
     - target: {fileID: 114883841138111486, guid: a198ec2602d7e734b80e7d46ab97be9a,
         type: 2}
       propertyPath: playerSpeed
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 114616539170728722, guid: a198ec2602d7e734b80e7d46ab97be9a,
         type: 2}
       propertyPath: healthPoints
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4934376164910502, guid: a198ec2602d7e734b80e7d46ab97be9a, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.0164
+      objectReference: {fileID: 0}
+    - target: {fileID: 114616539170728722, guid: a198ec2602d7e734b80e7d46ab97be9a,
+        type: 2}
+      propertyPath: _maxHealth
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a198ec2602d7e734b80e7d46ab97be9a, type: 2}
