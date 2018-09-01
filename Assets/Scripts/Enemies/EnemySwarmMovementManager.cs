@@ -102,8 +102,8 @@ namespace Name
 			return posX < minPosX && hDir < 0 || posX > maxPosX && hDir > 0;
 		}
 
-		//void OnDrawGizmosSelected()
-		void OnDrawGizmos()
+		void OnDrawGizmosSelected()
+		//void OnDrawGizmos()
 		{
 			Gizmos.color = Color.red;
 			var y = 1000000;
