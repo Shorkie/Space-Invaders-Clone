@@ -24,10 +24,20 @@ namespace Name
 
 		void OnTriggerEnter2D (Collider2D other)
 		{
-			var h = other.GetComponent<Health>();
-			if (h != null){
-				h.TakeDamage(bulletDamage);
+			var h = other.GetComponent<Health> ();
+			var s = Camera.main.GetComponent<Screenshake> ();
+			if (h != null)
+			{
+				//Shake
+				s.shouldShake = true;
+				h.TakeDamage (bulletDamage);
+				Debug.Log (this.name + " hitted with object " + other.name);
 
+			}
+			//Destroying bullet on impact with barrier
+			if (other.gameObject.tag == "barrier")
+			{
+				Destroy (gameObject);
 			}
 		}
 		//Destroying bullet when it's not being rendered by the camera

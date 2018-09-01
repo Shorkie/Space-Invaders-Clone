@@ -113,68 +113,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1001 &5429519
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1582714950}
-    m_Modifications:
-    - target: {fileID: 4209987922912478, guid: 77cdb53db9183c146aab47a0535f22f8, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4209987922912478, guid: 77cdb53db9183c146aab47a0535f22f8, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 4209987922912478, guid: 77cdb53db9183c146aab47a0535f22f8, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4209987922912478, guid: 77cdb53db9183c146aab47a0535f22f8, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4209987922912478, guid: 77cdb53db9183c146aab47a0535f22f8, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4209987922912478, guid: 77cdb53db9183c146aab47a0535f22f8, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4209987922912478, guid: 77cdb53db9183c146aab47a0535f22f8, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4209987922912478, guid: 77cdb53db9183c146aab47a0535f22f8, type: 2}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 61259798628831618, guid: 77cdb53db9183c146aab47a0535f22f8,
-        type: 2}
-      propertyPath: m_Offset.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 61259798628831618, guid: 77cdb53db9183c146aab47a0535f22f8,
-        type: 2}
-      propertyPath: m_Size.x
-      value: 0.26610243
-      objectReference: {fileID: 0}
-    - target: {fileID: 61259798628831618, guid: 77cdb53db9183c146aab47a0535f22f8,
-        type: 2}
-      propertyPath: m_Size.y
-      value: 0.20110221
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 77cdb53db9183c146aab47a0535f22f8, type: 2}
-  m_IsPrefabAsset: 0
---- !u!4 &5429520 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4209987922912478, guid: 77cdb53db9183c146aab47a0535f22f8,
-    type: 2}
-  m_PrefabInternal: {fileID: 5429519}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -185,6 +123,7 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
+  - component: {fileID: 519420030}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -199,6 +138,22 @@ AudioListener:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
+--- !u!114 &519420030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dcdaf5a18225d94a9c272bfc4f4afea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  power: 0.05
+  duration: 0.005
+  camera: {fileID: 0}
+  slowDownAmount: 0.05
+  shouldShake: 0
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -340,6 +295,11 @@ Prefab:
       propertyPath: playerSpeed
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114616539170728722, guid: a198ec2602d7e734b80e7d46ab97be9a,
+        type: 2}
+      propertyPath: healthPoints
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a198ec2602d7e734b80e7d46ab97be9a, type: 2}
   m_IsPrefabAsset: 0
@@ -368,8 +328,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 5429520}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -385,9 +344,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemies: []
-  hSpeed: 2.5
-  vSpeed: -0.5
+  speed: 10
+  hDir: 1
+  vDir: 0
   vTimerMax: 0.4
   minPosX: -7
   maxPosX: 7
-  moveDown: 0

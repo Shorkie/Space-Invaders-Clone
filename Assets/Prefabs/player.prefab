@@ -129,12 +129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a48b3ab9894de434e9e23b87ac7c427d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthPoints: 0
-  onDeath:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
+  _maxHealth: 1000
 --- !u!114 &114883841138111486
 MonoBehaviour:
   m_ObjectHideFlags: 1

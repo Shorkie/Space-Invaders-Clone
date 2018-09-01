@@ -2,7 +2,8 @@ Player:
     ✔ Movement @done(18-08-30 14:13)
     ✔ Shooting @done(18-08-30 14:13)
     ✔ Should move slower @done(18-08-30 14:18)
-    
-    ☐ Should break barriers
+    - Ignore tags
+    - Collision layers
+    ☐ Should break barriers (Healthpoints / maxHealthpoints
 Enemies:
     ☐ 

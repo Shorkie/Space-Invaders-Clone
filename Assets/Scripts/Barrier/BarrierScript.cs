@@ -2,25 +2,33 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BarrierScript : MonoBehaviour
+namespace Name
 {
-	public Sprite[] barrierStates;
-	// Use this for initialization
-	void Start ()
-	{ }
-
-	// Update is called once per frame
-	void Update ()
+	public class BarrierScript : MonoBehaviour
 	{
-		DamageBarrier ();
+		Health h;
+		public Sprite[] barrierStates;
+		public int arrayIndexNum;
+		// Use this for initialization
+		void Start ()
+		{
+			h = this.GetComponent<Health> ();
+
+		}
+
+		// Update is called once per frame
+		void Update ()
+		{
+			DamageBarrier ();
+		}
+
+		void DamageBarrier ()
+		{
+			arrayIndexNum = (int)h.healthPoints;
+			SpriteRenderer barrierSprite = this.gameObject.GetComponent<SpriteRenderer> ();
+			barrierSprite.sprite = barrierStates[arrayIndexNum];
+			Debug.Log(h.healthPoints);
+
+		}
 	}
-
-	void DamageBarrier ()
-	{
-		int sprIndex = barrierStates.Length - 1;
-		SpriteRenderer barrierSprite = this.gameObject.GetComponent<SpriteRenderer> ();
-		barrierSprite.sprite = barrierStates[sprIndex];
-
-	}
-
 }
