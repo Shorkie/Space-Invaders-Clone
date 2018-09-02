@@ -216,6 +216,7 @@ GameObject:
   m_Component:
   - component: {fileID: 901559996}
   - component: {fileID: 901559995}
+  - component: {fileID: 901559997}
   m_Layer: 0
   m_Name: barrierSpawner
   m_TagString: Untagged
@@ -251,6 +252,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &901559997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 901559994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2072508bc57014542891542ab8fc599d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &902204446
 Prefab:
   m_ObjectHideFlags: 0
@@ -302,12 +314,27 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4934376164910502, guid: a198ec2602d7e734b80e7d46ab97be9a, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0.0164
+      value: -0.0396
       objectReference: {fileID: 0}
     - target: {fileID: 114616539170728722, guid: a198ec2602d7e734b80e7d46ab97be9a,
         type: 2}
       propertyPath: _maxHealth
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 82611675374639424, guid: a198ec2602d7e734b80e7d46ab97be9a,
+        type: 2}
+      propertyPath: m_Volume
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 82611675374639424, guid: a198ec2602d7e734b80e7d46ab97be9a,
+        type: 2}
+      propertyPath: m_Pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114883841138111486, guid: a198ec2602d7e734b80e7d46ab97be9a,
+        type: 2}
+      propertyPath: shootingCooldown
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a198ec2602d7e734b80e7d46ab97be9a, type: 2}
