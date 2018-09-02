@@ -16,31 +16,61 @@ namespace Name
 		float timer;
 		Rigidbody2D rb2D;
 
-		void Awake()
+		[Space]
+		[SerializeField] bool canShoot;
+
+		private UnityEngine.Events.UnityAction onBecameInvisibleUAction;
+		private UnityEngine.Events.UnityAction onBecameVisibleUAction;
+
+		void OnBecameInvisible()
 		{
-			rb2D = GetComponent<Rigidbody2D>();
-			rb2D.interpolation = RigidbodyInterpolation2D.Interpolate;
+			Debug.Log(this.name + " became invisible");
+			canShoot = false;
 		}
 
-		public void Shoot(float chanceModifier=1)
+		void OnBecameVisible ()
 		{
-			var r = Random.Range(0, 1000);
+			Debug.Log(this.name + " became visible");
+			canShoot = true;
+		}
+
+		void Awake ()
+		{
+			rb2D = GetComponent<Rigidbody2D> ();
+			rb2D.interpolation = RigidbodyInterpolation2D.Interpolate;
+
+			var spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+			var ovcc = spriteRenderer.gameObject.AddComponent<OnVisibilityChanged>();
+			//ovcc.onBecameInvisible += OnBecameInvisible;
+			//ovcc.onBecameVisible += OnBecameVisible;
+			Debug.LogError("WORKING ON VISIBILITY");
+
+			spriteRenderer.color = Color.red;
+		}
+
+		public void Shoot (float chanceModifier = 1)
+		{
+			if ( canShoot == false )
+			{
+				return;
+			}
+			var r = Random.Range (0, 1000);
 			bool calculateChance = r <= baseChanceToShoot;
-			if ( calculateChance && shot == false )
+			if (calculateChance && shot == false)
 			{
 				shot = true;
-				var go = Instantiate(pfbBullet);
+				var go = Instantiate (pfbBullet);
 				go.transform.position = this.transform.position;
 				go.transform.parent = this.transform.parent;
 			}
 		}
 
-		void Update()
+		void Update ()
 		{
-			if ( shot )
+			if (shot)
 			{
 				timer += Time.deltaTime;
-				if ( timer > Random.Range(.5f, 1.5f) )
+				if (timer > Random.Range (.5f, 1.5f))
 				{
 					shot = false;
 					timer = 0;
@@ -48,10 +78,10 @@ namespace Name
 			}
 		}
 
-		void FixedUpdate()
+		void FixedUpdate ()
 		{
 			//transform.position += dir * ( speed * Time.deltaTime );
-			rb2D.MovePosition(transform.position + dir * ( speed * Time.deltaTime ));
+			rb2D.MovePosition (transform.position + dir * (speed * Time.deltaTime));
 		}
 	}
 }
