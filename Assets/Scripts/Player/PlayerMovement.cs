@@ -15,8 +15,7 @@ public class PlayerMovement : MonoBehaviour
     bool canShoot = true;
     // Use this for initialization
     void Start ()
-    {
-    }
+    { }
     // Update is called once per frame
     void Update ()
     {
@@ -49,10 +48,11 @@ public class PlayerMovement : MonoBehaviour
             Instantiate (bullet, bulletSpawnPosition.transform.position, bulletSpawnPosition.transform.rotation);
         }
         //Cooldown going down
-        if (canShoot == false){
-        shootingIn -= Time.deltaTime;
-        //Preventing it from going negative
-            if (shootingIn < 0f)
+        if (canShoot == false)
+        {
+            shootingIn -= Time.deltaTime;
+            //Preventing it from going negative
+            if (shootingIn <= 0f)
             {
                 shootingIn = 0f;
                 canShoot = true;

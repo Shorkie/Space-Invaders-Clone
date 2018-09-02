@@ -30,10 +30,19 @@ namespace Name
 
 		void DamageBarrier ()
 		{
-			arrayIndexNum = (int)h.healthPoints;
+			arrayIndexNum = (int) h.healthPoints;
 			SpriteRenderer barrierSprite = this.gameObject.GetComponent<SpriteRenderer> ();
+			if (h.healthPoints > 0)
+			{
 			barrierSprite.sprite = barrierStates[arrayIndexNum];
-			Debug.Log(h.healthPoints);
+			}
+			else
+			{
+			//First sprite = Explosion
+			barrierSprite.sprite = barrierStates[0];
+			}
+			
+			Debug.Log (h.healthPoints);
 
 		}
 	}

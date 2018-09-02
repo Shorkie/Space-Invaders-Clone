@@ -10,8 +10,11 @@ namespace Name
 		[SerializeField] float _maxHealth = 10;
 		public float maxHealth { get { return _maxHealth; } protected set { _maxHealth = value; } }
 
-		
 		public float healthPoints { get; protected set; }
+
+		//Destroy game object timer
+    	public float destroyIn;
+    	public float destroyCountdown;
 
 		// [System.Serializable]
 		// public class UnityEventFloat : UnityEvent<float> {}
@@ -19,14 +22,37 @@ namespace Name
 		// public UnityEventFloat onDamageTaken;
 		// public UnityEvent onDeath;
 
-		void Awake()
+		void Awake ()
 		{
 			healthPoints = _maxHealth;
 		}
 
-		public void TakeDamage(float value)
+		void Start()
 		{
-			if ( value < 0 )
+			//Setting the timer
+			destroyCountdown = destroyIn;
+		}
+
+		void Update()
+		{
+			//Countdown on
+			if (healthPoints <= 0)
+			{
+			//Disabling collider
+			this.gameObject.GetComponent<Collider2D>().enabled = false;
+			//Countdown 
+			destroyCountdown -= Time.deltaTime;
+			//Destroy it
+			if (destroyCountdown < 0f)
+			{
+				DestroyGameObject();
+			}
+			}
+		}
+
+		public void TakeDamage (float value)
+		{
+			if (value < 0)
 			{
 				return;
 			}
@@ -38,18 +64,33 @@ namespace Name
 
 			if (healthPoints <= 0)
 			{
-				Die();
+				Die ();
 			}
 		}
 
-		void Die()
+		void Die ()
 		{
 			// TODO: Spawn effects
-			
+
 			// if ( onDeath != null )
 			// 	onDeath.Invoke();
-			
-			Destroy(this.gameObject);
+			//Barrier death effect
+			if (this.gameObject.tag == "barrier")
+			{
+				Debug.Log("Destroyed barrier");
+				//Barrier destruction
+				AudioSource b = this.gameObject.GetComponent<AudioSource> ();
+				var bSounds = this.GetComponent<BarrierScript> ();
+				//Select the last sound in the array 
+				b.clip = bSounds.barrierDamageFX[5];
+				//Play explosion sound
+				b.Play ();
+			}
+		}
+
+		void DestroyGameObject()
+		{
+			Destroy(gameObject);
 		}
 	}
 }

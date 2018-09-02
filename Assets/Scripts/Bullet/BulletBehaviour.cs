@@ -29,21 +29,22 @@ namespace Name
 		{
 			var h = other.GetComponent<Health> ();
 			var s = Camera.main.GetComponent<Screenshake> ();
-			if (checkSpawner){
-			spawner = other.tag;
-			checkSpawner = false;
+			if (checkSpawner)
+			{
+				spawner = other.tag;
+				checkSpawner = false;
 			}
 			if (h != null && other.tag != spawner)
 			{
 				//Collided with barrier
-				if(other.tag == "barrier"){
-				AudioSource b = other.gameObject.GetComponent<AudioSource>();
-				var bSounds = other.GetComponent<BarrierScript>();
-				//Choose a random sound withing barrierDamageFX
-				b.clip = bSounds.barrierDamageFX[Random.Range(0, bSounds.barrierDamageFX.Length)];
-				//Play chosen sound
-				b.Play();
-
+				if (other.tag == "barrier")
+				{
+					AudioSource b = other.gameObject.GetComponent<AudioSource> ();
+					var bSounds = other.GetComponent<BarrierScript> ();
+					//Choose a random sound withing barrierDamageFX
+					b.clip = bSounds.barrierDamageFX[Random.Range (0, bSounds.barrierDamageFX.Length-1)];
+					//Play chosen sound
+					b.Play ();
 
 				}
 				//Shake
@@ -51,7 +52,7 @@ namespace Name
 				h.TakeDamage (bulletDamage);
 				Debug.Log (this.name + " hitted with object " + other.name);
 				//Destroying bullet upon impact
-				Destroy(gameObject);
+				Destroy (gameObject);
 
 			}
 		}

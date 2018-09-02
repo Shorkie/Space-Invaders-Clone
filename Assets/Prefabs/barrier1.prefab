@@ -197,6 +197,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _maxHealth: 6
+  destroyIn: 1
+  destroyCountdown: 1
 --- !u!114 &114236333683759882
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -224,6 +226,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 9f03616d10383cd4f97ed32e5967dede, type: 3}
   - {fileID: 8300000, guid: 1068337f3d4d7c94b93372ae2a2060c9, type: 3}
   - {fileID: 8300000, guid: 3f586017b34067044b040892dff67fc6, type: 3}
+  - {fileID: 8300000, guid: 4b0862b639b69b045aade6b7539be39b, type: 3}
 --- !u!212 &212609001846899486
 SpriteRenderer:
   m_ObjectHideFlags: 1
