@@ -6,9 +6,15 @@ namespace Name
 {
 	public class BarrierScript : MonoBehaviour
 	{
+		//Health stuff
 		Health h;
+		//Sprite stuff
 		public Sprite[] barrierStates;
 		public int arrayIndexNum;
+		//Sound stuff
+		public AudioSource audioSource;
+		public AudioClip[] barrierDamageFX;
+
 		// Use this for initialization
 		void Start ()
 		{

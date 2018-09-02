@@ -300,7 +300,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4660616710189328, guid: a198ec2602d7e734b80e7d46ab97be9a, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114883841138111486, guid: a198ec2602d7e734b80e7d46ab97be9a,
         type: 2}
@@ -334,7 +334,7 @@ Prefab:
     - target: {fileID: 114883841138111486, guid: a198ec2602d7e734b80e7d46ab97be9a,
         type: 2}
       propertyPath: shootingCooldown
-      value: 0.5
+      value: 0.25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a198ec2602d7e734b80e7d46ab97be9a, type: 2}
@@ -366,7 +366,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1582714951
 MonoBehaviour:

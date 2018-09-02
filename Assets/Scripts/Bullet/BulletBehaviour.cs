@@ -35,6 +35,17 @@ namespace Name
 			}
 			if (h != null && other.tag != spawner)
 			{
+				//Collided with barrier
+				if(other.tag == "barrier"){
+				AudioSource b = other.gameObject.GetComponent<AudioSource>();
+				var bSounds = other.GetComponent<BarrierScript>();
+				//Choose a random sound withing barrierDamageFX
+				b.clip = bSounds.barrierDamageFX[Random.Range(0, bSounds.barrierDamageFX.Length)];
+				//Play chosen sound
+				b.Play();
+
+
+				}
 				//Shake
 				s.shouldShake = true;
 				h.TakeDamage (bulletDamage);

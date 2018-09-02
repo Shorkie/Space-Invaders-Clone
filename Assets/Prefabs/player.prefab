@@ -239,9 +239,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletSpawnPosition: {fileID: 1696128281400190}
   bullet: {fileID: 1136562684376040, guid: dd2f0e8c0758feb4492d0fd723fb69fa, type: 2}
-  soundEffect: {fileID: 0}
   audioSource: {fileID: 0}
   playerSpeed: 7
+  shootingCooldown: 0.5
 --- !u!212 &212358828142332604
 SpriteRenderer:
   m_ObjectHideFlags: 1
