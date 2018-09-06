@@ -22,38 +22,35 @@ namespace Name
 		private UnityEngine.Events.UnityAction onBecameInvisibleUAction;
 		private UnityEngine.Events.UnityAction onBecameVisibleUAction;
 
-		void OnBecameInvisible()
-		{
-			Debug.Log(this.name + " became invisible");
-			canShoot = false;
-		}
-
-		void OnBecameVisible ()
-		{
-			Debug.Log(this.name + " became visible");
-			canShoot = true;
-		}
+		SpriteRenderer spriteRenderer;
 
 		void Awake ()
 		{
 			rb2D = GetComponent<Rigidbody2D> ();
 			rb2D.interpolation = RigidbodyInterpolation2D.Interpolate;
 
-			var spriteRenderer = GetComponentInChildren<SpriteRenderer>();
-			var ovcc = spriteRenderer.gameObject.AddComponent<OnVisibilityChanged>();
+			spriteRenderer = GetComponentInChildren<SpriteRenderer>();
 			//ovcc.onBecameInvisible += OnBecameInvisible;
 			//ovcc.onBecameVisible += OnBecameVisible;
-			Debug.LogError("WORKING ON VISIBILITY");
+			//Debug.LogError("WORKING ON VISIBILITY");
 
 			spriteRenderer.color = Color.red;
 		}
 
 		public void Shoot (float chanceModifier = 1)
 		{
-			if ( canShoot == false )
+			#if UNITY_EDITOR
+			if ( spriteRenderer.IsVisibleFrom(Camera.main) == false )
 			{
 				return;
 			}
+			#else
+			if ( spriteRenderer.isVisible == false )
+			{
+				return;
+			}
+			#endif
+
 			var r = Random.Range (0, 1000);
 			bool calculateChance = r <= baseChanceToShoot;
 			if (calculateChance && shot == false)
