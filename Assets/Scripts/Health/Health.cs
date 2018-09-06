@@ -9,22 +9,40 @@ namespace Name
 	{
 		[SerializeField] float _maxHealth = 10;
 		public float maxHealth { get { return _maxHealth; } protected set { _maxHealth = value; } }
+<<<<<<< HEAD
 
+=======
+>>>>>>> fdz
 		public float healthPoints { get; protected set; }
+		bool _isDead;
+		public bool isDead { get { return _isDead; } protected set { _isDead = value; } }
+		
+		[Space]
+		public bool destroyOnDeath = true;
+		[SerializeField] GameObject spawnOnDeath;
+		public AudioClip hurtSound;
+
+		AudioSource audioSource;
 
 		//Destroy game object timer
     	public float destroyIn;
     	public float destroyCountdown;
 
 		// [System.Serializable]
-		// public class UnityEventFloat : UnityEvent<float> {}
+		// public class UnityEventFloat : UnityEvent<float> {}// maybe onDamageTakenCouldUseThis
 
-		// public UnityEventFloat onDamageTaken;
-		// public UnityEvent onDeath;
+		[System.Serializable]
+		public class UnityEventGameObject : UnityEvent<GameObject> {}// maybe onDamageTakenCouldUseThis
+
+		[Space]
+		public UnityEvent onDamageTaken;
+		public UnityEvent onDeath;
+		public UnityEventGameObject onDeathPrefabInstantiated;
 
 		void Awake ()
 		{
 			healthPoints = _maxHealth;
+			audioSource = GetComponent<AudioSource>();
 		}
 
 		void Start()
@@ -59,8 +77,15 @@ namespace Name
 
 			healthPoints -= value;
 
-			// if ( onDamageTaken != null )
-			// 	onDamageTaken.Invoke(healthPoints);
+			if ( onDamageTaken != null )
+			{
+				if ( audioSource != null && hurtSound != null )
+				{
+					audioSource.clip = hurtSound;
+					audioSource.Play();
+				}
+			 	onDamageTaken.Invoke();
+			}
 
 			if (healthPoints <= 0)
 			{
@@ -70,6 +95,7 @@ namespace Name
 
 		void Die ()
 		{
+<<<<<<< HEAD
 			// TODO: Spawn effects
 
 			// if ( onDeath != null )
@@ -91,6 +117,35 @@ namespace Name
 		void DestroyGameObject()
 		{
 			Destroy(gameObject);
+=======
+			if ( isDead )
+			{
+				return;
+			}
+
+			isDead = true;
+
+			if ( onDeath != null )
+			{
+			 	onDeath.Invoke();
+			}
+			
+			if (spawnOnDeath != null)
+			{
+				var go = Instantiate(spawnOnDeath);
+				go.transform.position = this.transform.position;
+
+				if ( onDeathPrefabInstantiated != null )
+				{
+					onDeathPrefabInstantiated.Invoke(go);
+				}
+			}
+
+			if (destroyOnDeath)
+			{
+				Destroy(this.gameObject);
+			}
+>>>>>>> fdz
 		}
 	}
 }

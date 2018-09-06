@@ -156,119 +156,6 @@ Prefab:
       propertyPath: m_Name
       value: Enemy Swarm (4x4) (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 4907021750774924, guid: 11805d229bada69408a909c99ae7b453, type: 2}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4310697713205476, guid: 11805d229bada69408a909c99ae7b453, type: 2}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114279804627350526, guid: 11805d229bada69408a909c99ae7b453,
-        type: 2}
-      propertyPath: _maxHealth
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114338348443016042, guid: 11805d229bada69408a909c99ae7b453,
-        type: 2}
-      propertyPath: _maxHealth
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114486629651677638, guid: 11805d229bada69408a909c99ae7b453,
-        type: 2}
-      propertyPath: _maxHealth
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114211638057634996, guid: 11805d229bada69408a909c99ae7b453,
-        type: 2}
-      propertyPath: _maxHealth
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114189258715766224, guid: 11805d229bada69408a909c99ae7b453,
-        type: 2}
-      propertyPath: _maxHealth
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114574364643411476, guid: 11805d229bada69408a909c99ae7b453,
-        type: 2}
-      propertyPath: _maxHealth
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114770358028779056, guid: 11805d229bada69408a909c99ae7b453,
-        type: 2}
-      propertyPath: _maxHealth
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114650389636408666, guid: 11805d229bada69408a909c99ae7b453,
-        type: 2}
-      propertyPath: _maxHealth
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114350452232188810, guid: 11805d229bada69408a909c99ae7b453,
-        type: 2}
-      propertyPath: _maxHealth
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114954850415324524, guid: 11805d229bada69408a909c99ae7b453,
-        type: 2}
-      propertyPath: _maxHealth
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114535234958054242, guid: 11805d229bada69408a909c99ae7b453,
-        type: 2}
-      propertyPath: _maxHealth
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114255272168073338, guid: 11805d229bada69408a909c99ae7b453,
-        type: 2}
-      propertyPath: _maxHealth
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114044844714152010, guid: 11805d229bada69408a909c99ae7b453,
-        type: 2}
-      propertyPath: _maxHealth
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114457325490105886, guid: 11805d229bada69408a909c99ae7b453,
-        type: 2}
-      propertyPath: _maxHealth
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114445265845984294, guid: 11805d229bada69408a909c99ae7b453,
-        type: 2}
-      propertyPath: _maxHealth
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114139502343596280, guid: 11805d229bada69408a909c99ae7b453,
-        type: 2}
-      propertyPath: _maxHealth
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114389460950965938, guid: 11805d229bada69408a909c99ae7b453,
-        type: 2}
-      propertyPath: _maxHealth
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114946786182251536, guid: 11805d229bada69408a909c99ae7b453,
-        type: 2}
-      propertyPath: _maxHealth
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114039136636958524, guid: 11805d229bada69408a909c99ae7b453,
-        type: 2}
-      propertyPath: _maxHealth
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114427016905248328, guid: 11805d229bada69408a909c99ae7b453,
-        type: 2}
-      propertyPath: _maxHealth
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114019511585471418, guid: 11805d229bada69408a909c99ae7b453,
-        type: 2}
-      propertyPath: speed
-      value: 2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11805d229bada69408a909c99ae7b453, type: 2}
   m_IsPrefabAsset: 0
@@ -381,7 +268,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &901559995
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -408,7 +295,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &902204446
 Prefab:
@@ -447,7 +334,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4660616710189328, guid: a198ec2602d7e734b80e7d46ab97be9a, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114883841138111486, guid: a198ec2602d7e734b80e7d46ab97be9a,
         type: 2}
@@ -471,7 +358,7 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a198ec2602d7e734b80e7d46ab97be9a, type: 2}
   m_IsPrefabAsset: 0
---- !u!1001 &967248459
+--- !u!1001 &1687706268
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -510,71 +397,19 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 114267346690737364, guid: 3d8e0cb1edc055940935046ec0dcfc21,
+    - target: {fileID: 114656353606672196, guid: 3d8e0cb1edc055940935046ec0dcfc21,
         type: 2}
-      propertyPath: _maxHealth
+      propertyPath: destroyOnDeath
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114967886224304574, guid: 3d8e0cb1edc055940935046ec0dcfc21,
+    - target: {fileID: 114555972529954032, guid: 3d8e0cb1edc055940935046ec0dcfc21,
         type: 2}
-      propertyPath: _maxHealth
+      propertyPath: destroyOnDeath
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114761469740310834, guid: 3d8e0cb1edc055940935046ec0dcfc21,
-        type: 2}
-      propertyPath: speed
-      value: 1.125
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d8e0cb1edc055940935046ec0dcfc21, type: 2}
   m_IsPrefabAsset: 0
---- !u!1 &1582714949
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1582714950}
-  - component: {fileID: 1582714951}
-  m_Layer: 0
-  m_Name: Enemy Swarm
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1582714950
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1582714949}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1582714951
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1582714949}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f3ab36dfd02c8f4e9d2e623901ecec8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemies: []
-  speed: 10
-  hDir: 1
-  vDir: 0
-  vTimerMax: 0.4
-  minPosX: -7
-  maxPosX: 7
 --- !u!1001 &2124614801
 Prefab:
   m_ObjectHideFlags: 0
@@ -613,120 +448,6 @@ Prefab:
     - target: {fileID: 4302169364943034, guid: 11805d229bada69408a909c99ae7b453, type: 2}
       propertyPath: m_RootOrder
       value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 114019511585471418, guid: 11805d229bada69408a909c99ae7b453,
-        type: 2}
-      propertyPath: hDir
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1225825748414086, guid: 11805d229bada69408a909c99ae7b453, type: 2}
-      propertyPath: m_Name
-      value: Enemy Swarm (4x4)
-      objectReference: {fileID: 0}
-    - target: {fileID: 114486629651677638, guid: 11805d229bada69408a909c99ae7b453,
-        type: 2}
-      propertyPath: _maxHealth
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114535234958054242, guid: 11805d229bada69408a909c99ae7b453,
-        type: 2}
-      propertyPath: _maxHealth
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114139502343596280, guid: 11805d229bada69408a909c99ae7b453,
-        type: 2}
-      propertyPath: _maxHealth
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114279804627350526, guid: 11805d229bada69408a909c99ae7b453,
-        type: 2}
-      propertyPath: _maxHealth
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114211638057634996, guid: 11805d229bada69408a909c99ae7b453,
-        type: 2}
-      propertyPath: _maxHealth
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114954850415324524, guid: 11805d229bada69408a909c99ae7b453,
-        type: 2}
-      propertyPath: _maxHealth
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114338348443016042, guid: 11805d229bada69408a909c99ae7b453,
-        type: 2}
-      propertyPath: _maxHealth
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114350452232188810, guid: 11805d229bada69408a909c99ae7b453,
-        type: 2}
-      propertyPath: _maxHealth
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114189258715766224, guid: 11805d229bada69408a909c99ae7b453,
-        type: 2}
-      propertyPath: _maxHealth
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114445265845984294, guid: 11805d229bada69408a909c99ae7b453,
-        type: 2}
-      propertyPath: _maxHealth
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114044844714152010, guid: 11805d229bada69408a909c99ae7b453,
-        type: 2}
-      propertyPath: _maxHealth
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114039136636958524, guid: 11805d229bada69408a909c99ae7b453,
-        type: 2}
-      propertyPath: _maxHealth
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114457325490105886, guid: 11805d229bada69408a909c99ae7b453,
-        type: 2}
-      propertyPath: _maxHealth
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114389460950965938, guid: 11805d229bada69408a909c99ae7b453,
-        type: 2}
-      propertyPath: _maxHealth
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114427016905248328, guid: 11805d229bada69408a909c99ae7b453,
-        type: 2}
-      propertyPath: _maxHealth
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114650389636408666, guid: 11805d229bada69408a909c99ae7b453,
-        type: 2}
-      propertyPath: _maxHealth
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114946786182251536, guid: 11805d229bada69408a909c99ae7b453,
-        type: 2}
-      propertyPath: _maxHealth
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114770358028779056, guid: 11805d229bada69408a909c99ae7b453,
-        type: 2}
-      propertyPath: _maxHealth
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114574364643411476, guid: 11805d229bada69408a909c99ae7b453,
-        type: 2}
-      propertyPath: _maxHealth
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114255272168073338, guid: 11805d229bada69408a909c99ae7b453,
-        type: 2}
-      propertyPath: _maxHealth
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114019511585471418, guid: 11805d229bada69408a909c99ae7b453,
-        type: 2}
-      propertyPath: speed
-      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11805d229bada69408a909c99ae7b453, type: 2}

@@ -3,5 +3,13 @@ Enemies:
     ✔ Shooting @done(18-08-30 17:45)
     ✔ Smoother vertical movement @done(18-08-31 00:36)
     ☐ Spawner
+        semi procedural, spawn the prefabs of SwarmMovementManager
     ☐ Add delay between rows
     ☐ Enemies should die if they collide with each other
+    ☐ Boss
+        Use another tag for the boss, so it destroys little ships
+    ☐ Enemies that kite
+    ☐ Enemies that attach to the shields and destroy them
+    ☐ UFO
+    ☐ Speed up and speed down all enemies from time to time
+    ☐ Fire Rate
