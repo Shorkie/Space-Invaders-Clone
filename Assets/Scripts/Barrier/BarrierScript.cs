@@ -9,41 +9,37 @@ namespace Name
 		//Health stuff
 		Health h;
 		//Sprite stuff
-		public Sprite[] barrierStates;
-		public int arrayIndexNum;
+		[SerializeField] Sprite[] barrierStates;
+		int arrayIndexNum;
 		//Sound stuff
-		public AudioSource audioSource;
-		public AudioClip[] barrierDamageFX;
+		[SerializeField] AudioClip[] barrierDamageFX;
+		AudioSource audioSource;
 
 		// Use this for initialization
 		void Start ()
 		{
 			h = this.GetComponent<Health> ();
-
+			audioSource = GetComponent<AudioSource>();
 		}
 
-		// Update is called once per frame
-		void Update ()
-		{
-			DamageBarrier ();
-		}
-
-		void DamageBarrier ()
+		public void OnDamageTaken(float curHealthPoints, float prevHealthPoints, float DamageTaken)
 		{
 			arrayIndexNum = (int) h.healthPoints;
 			SpriteRenderer barrierSprite = this.gameObject.GetComponent<SpriteRenderer> ();
 			if (h.healthPoints > 0)
 			{
-			barrierSprite.sprite = barrierStates[arrayIndexNum];
+				barrierSprite.sprite = barrierStates[arrayIndexNum];
 			}
 			else
 			{
-			//First sprite = Explosion
-			barrierSprite.sprite = barrierStates[0];
+				//First sprite = Explosion
+				barrierSprite.sprite = barrierStates[0];
 			}
 			
-			Debug.Log (h.healthPoints);
-
+			// Choose a random sound withing barrierDamageFX
+			var ac = barrierDamageFX[Random.Range (0, barrierDamageFX.Length-1)];
+			audioSource.clip = ac;
+			audioSource.Play();
 		}
 	}
 }

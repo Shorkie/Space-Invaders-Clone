@@ -9,10 +9,6 @@ namespace Name
 	{
 		[SerializeField] float _maxHealth = 10;
 		public float maxHealth { get { return _maxHealth; } protected set { _maxHealth = value; } }
-<<<<<<< HEAD
-
-=======
->>>>>>> fdz
 		public float healthPoints { get; protected set; }
 		bool _isDead;
 		public bool isDead { get { return _isDead; } protected set { _isDead = value; } }
@@ -24,18 +20,18 @@ namespace Name
 
 		AudioSource audioSource;
 
-		//Destroy game object timer
-    	public float destroyIn;
-    	public float destroyCountdown;
-
-		// [System.Serializable]
-		// public class UnityEventFloat : UnityEvent<float> {}// maybe onDamageTakenCouldUseThis
+		[System.Serializable]
+		public class UnityEventFloatX3 : UnityEvent<float, float, float> {}// maybe onDamageTakenCouldUseThis
 
 		[System.Serializable]
 		public class UnityEventGameObject : UnityEvent<GameObject> {}// maybe onDamageTakenCouldUseThis
 
 		[Space]
-		public UnityEvent onDamageTaken;
+		[Tooltip("curHealthPoints, prevHealthPoints, damageTaken")]
+		/// <summary>
+		/// curHealthPoints, prevHealthPoints, damageTaken
+		/// </summary>
+		public UnityEventFloatX3 onDamageTaken;
 		public UnityEvent onDeath;
 		public UnityEventGameObject onDeathPrefabInstantiated;
 
@@ -45,36 +41,14 @@ namespace Name
 			audioSource = GetComponent<AudioSource>();
 		}
 
-		void Start()
-		{
-			//Setting the timer
-			destroyCountdown = destroyIn;
-		}
-
-		void Update()
-		{
-			//Countdown on
-			if (healthPoints <= 0)
-			{
-			//Disabling collider
-			this.gameObject.GetComponent<Collider2D>().enabled = false;
-			//Countdown 
-			destroyCountdown -= Time.deltaTime;
-			//Destroy it
-			if (destroyCountdown < 0f)
-			{
-				DestroyGameObject();
-			}
-			}
-		}
-
 		public void TakeDamage (float value)
 		{
 			if (value < 0)
 			{
 				return;
 			}
-
+			
+			var prevHealthPoints = healthPoints;
 			healthPoints -= value;
 
 			if ( onDamageTaken != null )
@@ -84,7 +58,7 @@ namespace Name
 					audioSource.clip = hurtSound;
 					audioSource.Play();
 				}
-			 	onDamageTaken.Invoke();
+			 	onDamageTaken.Invoke(healthPoints, prevHealthPoints, value);
 			}
 
 			if (healthPoints <= 0)
@@ -93,31 +67,8 @@ namespace Name
 			}
 		}
 
-		void Die ()
+		void Die()
 		{
-<<<<<<< HEAD
-			// TODO: Spawn effects
-
-			// if ( onDeath != null )
-			// 	onDeath.Invoke();
-			//Barrier death effect
-			if (this.gameObject.tag == "barrier")
-			{
-				Debug.Log("Destroyed barrier");
-				//Barrier destruction
-				AudioSource b = this.gameObject.GetComponent<AudioSource> ();
-				var bSounds = this.GetComponent<BarrierScript> ();
-				//Select the last sound in the array 
-				b.clip = bSounds.barrierDamageFX[5];
-				//Play explosion sound
-				b.Play ();
-			}
-		}
-
-		void DestroyGameObject()
-		{
-			Destroy(gameObject);
-=======
 			if ( isDead )
 			{
 				return;
@@ -145,7 +96,6 @@ namespace Name
 			{
 				Destroy(this.gameObject);
 			}
->>>>>>> fdz
 		}
 	}
 }

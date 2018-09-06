@@ -113,6 +113,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &186139482 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114429305722983722, guid: 11805d229bada69408a909c99ae7b453,
+    type: 2}
+  m_PrefabInternal: {fileID: 339682652}
+  m_Script: {fileID: 11500000, guid: 31cf1e5dcd1ea654689465c8a5ee6ef7, type: 3}
 --- !u!1001 &339682652
 Prefab:
   m_ObjectHideFlags: 0
@@ -120,6 +126,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114189258715766224, guid: 11805d229bada69408a909c99ae7b453,
+        type: 2}
+      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4302169364943034, guid: 11805d229bada69408a909c99ae7b453, type: 2}
       propertyPath: m_LocalPosition.x
       value: -6
@@ -155,6 +166,21 @@ Prefab:
     - target: {fileID: 1225825748414086, guid: 11805d229bada69408a909c99ae7b453, type: 2}
       propertyPath: m_Name
       value: Enemy Swarm (4x4) (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114189258715766224, guid: 11805d229bada69408a909c99ae7b453,
+        type: 2}
+      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 186139482}
+    - target: {fileID: 114189258715766224, guid: 11805d229bada69408a909c99ae7b453,
+        type: 2}
+      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114189258715766224, guid: 11805d229bada69408a909c99ae7b453,
+        type: 2}
+      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11805d229bada69408a909c99ae7b453, type: 2}
@@ -268,7 +294,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &901559995
 MonoBehaviour:
   m_ObjectHideFlags: 0

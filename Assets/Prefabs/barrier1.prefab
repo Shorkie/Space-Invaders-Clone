@@ -197,8 +197,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _maxHealth: 6
-  destroyIn: 1
-  destroyCountdown: 1
+  destroyOnDeath: 1
+  spawnOnDeath: {fileID: 0}
+  hurtSound: {fileID: 8300000, guid: 1f1300bb08ddbde4f86a4018dc725301, type: 3}
+  onDamageTaken:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114236333683759882}
+        m_MethodName: OnDamageTaken
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: Name.Health+UnityEventFloatX3, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  onDeath:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  onDeathPrefabInstantiated:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Name.Health+UnityEventGameObject, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114236333683759882
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -218,15 +245,12 @@ MonoBehaviour:
   - {fileID: 21300004, guid: e6df1af1047485b48a8f1b0485c5d449, type: 3}
   - {fileID: 21300078, guid: e6df1af1047485b48a8f1b0485c5d449, type: 3}
   - {fileID: 21300000, guid: e6df1af1047485b48a8f1b0485c5d449, type: 3}
-  arrayIndexNum: 0
-  audioSource: {fileID: 0}
   barrierDamageFX:
   - {fileID: 8300000, guid: 1f1300bb08ddbde4f86a4018dc725301, type: 3}
   - {fileID: 8300000, guid: 3c11087d094a5f540928d81731ce57b2, type: 3}
   - {fileID: 8300000, guid: 9f03616d10383cd4f97ed32e5967dede, type: 3}
   - {fileID: 8300000, guid: 1068337f3d4d7c94b93372ae2a2060c9, type: 3}
   - {fileID: 8300000, guid: 3f586017b34067044b040892dff67fc6, type: 3}
-  - {fileID: 8300000, guid: 4b0862b639b69b045aade6b7539be39b, type: 3}
 --- !u!212 &212609001846899486
 SpriteRenderer:
   m_ObjectHideFlags: 1
