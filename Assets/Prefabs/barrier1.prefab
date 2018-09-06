@@ -198,7 +198,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _maxHealth: 6
   destroyOnDeath: 1
-  spawnOnDeath: {fileID: 0}
+  spawnOnDeath: {fileID: 1808180086541366, guid: b8a09fc0cfc3ef247b86774020fc7dc3,
+    type: 2}
   hurtSound: {fileID: 8300000, guid: 1f1300bb08ddbde4f86a4018dc725301, type: 3}
   onDamageTaken:
     m_PersistentCalls:

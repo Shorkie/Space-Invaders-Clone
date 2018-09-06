@@ -460,19 +460,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _maxHealth: 10
-  destroyOnDeath: 0
+  destroyOnDeath: 1
   spawnOnDeath: {fileID: 1808180086541366, guid: 62b0e6fef5d0fcb4c9b17ef3c11931b0,
     type: 2}
   hurtSound: {fileID: 8300000, guid: fa3cd5d2923e102488b2a5954040cdc0, type: 3}
   onDamageTaken:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
+    m_TypeName: Name.Health+UnityEventFloatX3, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
   onDeath:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  onDeathPrefabInstantiated:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Name.Health+UnityEventGameObject, Assembly-CSharp, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &114656353606672196
 MonoBehaviour:
@@ -486,19 +491,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _maxHealth: 10
-  destroyOnDeath: 0
+  destroyOnDeath: 1
   spawnOnDeath: {fileID: 1808180086541366, guid: 62b0e6fef5d0fcb4c9b17ef3c11931b0,
     type: 2}
   hurtSound: {fileID: 8300000, guid: fa3cd5d2923e102488b2a5954040cdc0, type: 3}
   onDamageTaken:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
+    m_TypeName: Name.Health+UnityEventFloatX3, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
   onDeath:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  onDeathPrefabInstantiated:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Name.Health+UnityEventGameObject, Assembly-CSharp, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &114684382843930892
 MonoBehaviour:
