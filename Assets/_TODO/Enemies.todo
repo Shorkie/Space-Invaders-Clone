@@ -2,14 +2,15 @@ Enemies:
     ✔ Basic movement @done(18-08-30 16:52)
     ✔ Shooting @done(18-08-30 17:45)
     ✔ Smoother vertical movement @done(18-08-31 00:36)
-    ☐ Spawner
-        semi procedural, spawn the prefabs of SwarmMovementManager
+    ✔ Swarm Spawner @done(18-09-08 16:11)
+    ✔ Wave Spawner @critical @done(18-09-08 17:45)
+    ✔ Speed Up @critical @done(18-09-08 18:36)
+    ☐ Speed up and speed down all enemies from time to time
     ☐ Add delay between rows
-    ☐ Enemies should die if they collide with each other
+    ✔ Enemies should die if they collide with each other @done(18-09-08 17:46)
     ☐ Boss
         Use another tag for the boss, so it destroys little ships
     ☐ Enemies that kite
     ☐ Enemies that attach to the shields and destroy them
     ☐ UFO
-    ☐ Speed up and speed down all enemies from time to time
-    ☐ Fire Rate
+    ✔ Fire Rate @done(18-09-08 17:46)

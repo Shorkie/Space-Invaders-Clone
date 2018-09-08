@@ -66,6 +66,15 @@ namespace Name
 			}
 		}
 
+		void OnTriggerEnter2D (Collider2D other)
+		{
+			var otherHealth = other.GetComponent<Health>();
+			if (otherHealth != null)
+			{
+				otherHealth.TakeDamage(this.healthPoints);
+			}
+		}
+
 		void Die()
 		{
 			if ( isDead )

@@ -4,43 +4,52 @@ using UnityEngine;
 
 namespace Name
 {
-	[DefaultExecutionOrder (-1000)]
+	[DefaultExecutionOrder(-1000)]
 	public class EnemySwarmMovementManager : MonoBehaviour
 	{
+		public bool allDead { get; protected set; }
 		public Enemy[] enemies;
 
-		[Header ("MOVEMENT")]
-		public float speed = 10;
+		[Header("MOVEMENT")]
 		public float hDir = 1;
 		public float vDir = 0;
+		public bool modifyVDirOnBounce = true;
+		[Space]
+		public float speed = 10;
 		bool moveDown;
 		Vector2 mDir;
 		[Space]
-		public float vTimerMax = .4f;
+		public float moveDownForSeconds = .4f;
 		float vTimer;
 
-		[Header ("POSITION BOUNDARIES")]
+		[Header("POSITION BOUNDARIES")]
 		public float minPosX;
 		public float maxPosX;
 
-		void Awake ()
+		void OnEnable()
 		{
-			enemies = GetComponentsInChildren<Enemy> ();
+			enemies = GetComponentsInChildren<Enemy>();
 		}
 
-		void FixedUpdate ()
+		public int deadCount { get; protected set; }
+		public int totalCount { get { return enemies.Length; } }
+
+		void FixedUpdate()
 		{
+			deadCount = 0;
+
 			var hittedBoundaries = false;
 			foreach (var unit in enemies)
 			{
-				if (IsUnitValid (unit) == false)
+				if (IsUnitValid(unit) == false)
 				{
+					deadCount++;
 					continue;
 				}
 
 				if (hittedBoundaries == false)
 				{
-					hittedBoundaries = HasHittedBoundaries (unit.transform.position.x);
+					hittedBoundaries = HasHittedBoundaries(unit.transform.position.x);
 					if (hittedBoundaries)
 					{
 						moveDown = true;
@@ -48,10 +57,15 @@ namespace Name
 					}
 				}
 
-				unit.Shoot ();
+				unit.Shoot();
 			}
 
-			if ( moveDown )
+			if (deadCount >= enemies.Length)
+			{
+				allDead = true;
+			}
+
+			if (moveDown)
 			{
 				MoveDownTimerTick();
 			}
@@ -62,8 +76,13 @@ namespace Name
 
 		void MoveDownTimerTick()
 		{
+			if (modifyVDirOnBounce == false)
+			{
+				return;
+			}
+
 			vTimer += Time.deltaTime;
-			if (vTimer < vTimerMax)
+			if (vTimer < moveDownForSeconds)
 			{
 				vDir = -1;
 			}
@@ -86,18 +105,18 @@ namespace Name
 		{
 			foreach (var unit in enemies)
 			{
-				unit.dir = this.mDir;
-				unit.speed = speed;
+				unit.dir = mDir.normalized;
+				unit.speed = speed * EnemyWave.speedModifier;
 			}
 		}
 
-		bool IsUnitValid (Enemy e)
+		bool IsUnitValid(Enemy e)
 		{
 			var check = e == null || e.isActiveAndEnabled == false || e.gameObject.activeInHierarchy == false || e.gameObject.activeSelf == false;
 			return check == false;
 		}
 
-		bool HasHittedBoundaries (float posX)
+		bool HasHittedBoundaries(float posX)
 		{
 			return posX < minPosX && hDir < 0 || posX > maxPosX && hDir > 0;
 		}
