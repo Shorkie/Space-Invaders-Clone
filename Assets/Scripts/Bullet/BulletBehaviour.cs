@@ -7,6 +7,8 @@ namespace Name
 	{
 		public int bulletDamage;
 		public float bulletSpeed;
+		//Score
+		public GameObject uiGO;
 		//Spawn check 
 		string spawner;
 		bool checkSpawner = true;
@@ -14,7 +16,8 @@ namespace Name
 		// Use this for initialization
 		void Start ()
 		{
-
+			//Finding the UI for the scoring system to use
+			uiGO = GameObject.FindWithTag("UI");
 		}
 
 		// Update is called once per frame
@@ -36,6 +39,14 @@ namespace Name
 			}
 			if (h != null && other.tag != spawner)
 			{
+					//Score
+					if (other.tag == "enemy" && GameObject.Find("/player") != null)
+					{
+						var a = uiGO.GetComponent<PlayerScore>();
+						//Score goes up
+						a.totalScore += a.scoreIncrement;
+						a.scoreText.text = "Score: " + a.totalScore;
+					}
 				//Shake
 				s.shouldShake = true;
 				h.TakeDamage (bulletDamage);

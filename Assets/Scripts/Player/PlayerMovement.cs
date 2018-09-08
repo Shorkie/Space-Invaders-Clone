@@ -6,6 +6,8 @@ public class PlayerMovement : MonoBehaviour
 {
     public GameObject bulletSpawnPosition;
     public GameObject bullet;
+    //UI Stuff
+
     //Sound stuff
     public AudioSource audioSource;
     public float playerSpeed;
@@ -19,6 +21,8 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update ()
     {
+        //Showing death screen
+
         //Moving left and preventing movement beyond the boundaries 
         if (Input.GetKey (KeyCode.LeftArrow) && (this.transform.position.x >= -6.7f))
         {

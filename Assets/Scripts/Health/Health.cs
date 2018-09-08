@@ -50,7 +50,6 @@ namespace Name
 			
 			var prevHealthPoints = healthPoints;
 			healthPoints -= value;
-
 			if ( onDamageTaken != null )
 			{
 				if ( audioSource != null && hurtSound != null )
