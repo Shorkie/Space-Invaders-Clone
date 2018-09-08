@@ -6,6 +6,8 @@ namespace Name
 {
 	public class Enemy : MonoBehaviour
 	{
+		public int score = 10;
+		[Space]
 		public GameObject pfbBullet;
 		public float baseChanceToShoot = 1;
 		[Space]
